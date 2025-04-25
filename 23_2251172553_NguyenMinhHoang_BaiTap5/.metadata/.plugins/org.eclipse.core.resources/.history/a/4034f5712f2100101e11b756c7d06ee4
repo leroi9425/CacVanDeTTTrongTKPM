@@ -1,0 +1,47 @@
+package NhanSu;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		NhanVien nv = new NhanVien("a", 3);
+		NhanVienToanThoiGian nvttg = new NhanVienToanThoiGian("a", 1);
+		
+		NhanVien a = (NhanVien)nvttg;
+		
+		
+	}
+
+	
+	public void nhapNhanVien(NhanVien nv) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Chon nhan vien: 1= nhan vien toan thoi gian, 2 = nhan vien ban thoi gian");
+		int option = sc.nextInt();
+		sc.nextLine();
+		
+		if (option == 1) {
+			nv = new NhanVienToanThoiGian();
+			
+			System.out.print("Ten:");
+			sc.nextLine();
+			
+			System.out.print("Gio lam: ");
+			sc.nextInt();
+			sc.nextLine();
+			
+		}
+		else if (option == 2) {
+			nv = new NhanVienBanThoiGian();
+			
+			System.out.print("Ten:");
+			sc.nextLine();
+			
+			System.out.print("Gio lam: ");
+			sc.nextInt();
+			sc.nextLine();
+		}
+	}
+}

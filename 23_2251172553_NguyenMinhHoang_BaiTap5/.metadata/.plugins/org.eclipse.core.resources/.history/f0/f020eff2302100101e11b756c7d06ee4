@@ -1,0 +1,20 @@
+package NhanSu;
+
+public class NhanVien {
+	private String Ten;
+	private int GioLam;
+	
+	public NhanVien() {}
+	public NhanVien(String Ten, int GioLam) {
+		this.Ten = Ten;
+		this.GioLam = GioLam;
+	}
+	
+	public int getGioLam() {
+		return GioLam;
+	}
+	public int getTen() {
+		return Ten;
+	}
+	
+}

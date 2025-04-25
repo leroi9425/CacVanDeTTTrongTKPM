@@ -1,0 +1,63 @@
+package NhanSu;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		NhanVien[] nv = new NhanVien[2];
+		
+		
+		for(int i=0 ; i<2 ; i++) {
+			nhapNhanVien( nv[i] );
+		}
+
+		for( int i=0 ; i<2 ; i++) {
+			xuatNhanVien( nv[i]);
+		}
+	}
+
+	public static void xuatNhanVien(NhanVien nv) {
+		System.out.println("Ten: " + nv.getTen() );
+		if(nv instanceof NhanVienToanThoiGian) {
+			System.out.println("Luong: " +  ((NhanVienToanThoiGian)nv).TinhLuong() );
+		}
+		else if (nv instanceof NhanVienBanThoiGian) {
+			System.out.println("Luong: " +  ((NhanVienBanThoiGian)nv).TinhLuong() );
+		}
+	}
+	
+	public static void nhapNhanVien(NhanVien nv) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Chon nhan vien: 1= nhan vien toan thoi gian, 2 = nhan vien ban thoi gian");
+		int option = sc.nextInt();
+		sc.nextLine();
+		
+		if (option == 1) {			
+			System.out.print("Ten:");
+			String Ten = sc.nextLine();
+			System.out.print(Ten);
+			
+			System.out.print("Gio lam: ");
+			int GioLam = sc.nextInt();
+			sc.nextLine();
+			
+			nv = new NhanVienToanThoiGian(Ten, GioLam);
+			xuatNhanVien(nv);
+			
+		}
+		else if (option == 2) {
+			System.out.print("Ten:");
+			String Ten = sc.nextLine();
+			System.out.print(Ten);
+			
+			System.out.print("Gio lam: ");
+			int GioLam = sc.nextInt();
+			sc.nextLine();
+			
+			nv = new NhanVienBanThoiGian(Ten, GioLam);
+		}
+	}
+}
