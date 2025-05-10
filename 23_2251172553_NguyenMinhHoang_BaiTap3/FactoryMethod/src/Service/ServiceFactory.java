@@ -1,10 +1,10 @@
 package Service;
 
 public abstract class ServiceFactory {
+	
 	public void someOperation() {
-		
+		Service sv = createService();
+		sv.showMessage();
 	}
-	public void createService() {
-		
-	}
+	public abstract Service createService();
 }
