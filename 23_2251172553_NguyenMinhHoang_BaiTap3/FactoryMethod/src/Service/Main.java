@@ -6,11 +6,11 @@ public class Main {
 		// TODO Auto-generated method stub
 		// tạo nhật ký
 		ServiceFactory LogCreator = new LogFactory();
-		LogCreator.someOperation();
+		LogCreator.showMessage();
 		
 		// tạo thông báo
 		ServiceFactory NotifyCreator = new NotifyFactory();
-		NotifyCreator.someOperation();
+		NotifyCreator.showMessage();
 	}
 
 }
