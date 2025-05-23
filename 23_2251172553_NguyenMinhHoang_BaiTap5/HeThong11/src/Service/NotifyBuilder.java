@@ -1,7 +1,7 @@
 package Service;
 
 public class NotifyBuilder implements ServiceBuilder {
-	Notify notify = new Notify();
+	private Notify notify = new Notify();
 
 	@Override
 	public void reset() {

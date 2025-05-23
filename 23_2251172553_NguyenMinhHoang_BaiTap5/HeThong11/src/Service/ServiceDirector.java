@@ -1,7 +1,7 @@
 package Service;
 
 public class ServiceDirector {
-	ServiceBuilder service;
+	private ServiceBuilder service;
 	
 	public ServiceDirector(ServiceBuilder Iservice) {
 		service = Iservice;

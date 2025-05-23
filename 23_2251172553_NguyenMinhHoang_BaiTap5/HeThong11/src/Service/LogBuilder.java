@@ -1,7 +1,7 @@
 package Service;
 
 public class LogBuilder implements ServiceBuilder {
-	Log log = new Log();
+	private Log log = new Log();
 
 	@Override
 	public void reset() {
